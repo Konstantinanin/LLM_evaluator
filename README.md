@@ -27,6 +27,8 @@ python main.py --csv path/to/your_dataset.csv --temperature 0.0 --seed 42
 --seed: Set to 42 for reproducibility.
 
 **Evaluation Dimensions**
+
+
 This framework scores model outputs on nine core metrics:
 
 Metric	Description
@@ -55,6 +57,8 @@ reports/graded_timestamp.csv
 reports/report_timestamp.md
 
 **Model Switch Guide**
+
+
 Currently, the evaluation uses mistral-largest-latest via the Mistral API. To change the model:
 
 Modify the self.model line in MetricScorer.__init__().
