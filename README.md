@@ -1,5 +1,4 @@
-# LLM_evaluator
-#  LLM Evaluation Framework
+# LLM evaluator
 
 This project provides a pipeline to evaluate Large Language Model (LLM) responses using automatic scoring via [Mistral API](https://mistral.ai/). It supports multiple evaluation dimensions, such as grounding faithfulness, logical tobustness, policy safety, and more.
 
