@@ -50,9 +50,9 @@ Each metric is scored from 1 (poor) to 5 (excellent).
 
 **Output will be saved to**:
 
-reports/graded_<timestamp>.csv
+reports/graded_timestamp.csv
 
-reports/report_<timestamp>.md
+reports/report_timestamp.md
 
 **Model Switch Guide**
 Currently, the evaluation uses mistral-largest-latest via the Mistral API. To change the model:
