@@ -42,15 +42,22 @@ contradiction: Does the answer contradict the retrieved sources?
 
 policy_safety:	Is it aligned with ethical & safety policies?
 
-task_completion:	Did the assistant do what was asked?
+task_completion: Did the assistant do what was asked?
 
-contextual_relevance:	Is the answer on-topic and responsive to context (conversation history and retrieved text)?
+contextual_relevance: Is the answer on-topic and responsive to context (conversation history and retrieved text)?
 
-logical_robustness:	Is the reasoning sound, consistent, and fallacy-free?
+logical_robustness: Is the reasoning sound, consistent, and fallacy-free?
 
 Each metric is scored from 1 (poor) to 5 (excellent).
 
-**Output will be saved to**:
+**Why these metrics**
+
+The dataset is heterogeneous and the assistant seems to be a general-purpose one. Since it is a production environment the metric *safety policy* was necessary to ensure no harmful answers were given ensuring the assistant has the necessary guardrails. Considering it as a general purporse assistant, metrics were selected in a way that covers many use cases that the dataset contains. Many of them are fact-based user questions meaning that *grounding faithfulness* is an extremely important metric. This metric also is generally recommended as it gives us a clue about the retrieval process. *Language appropriateness* is another relevant metric for production assistants, which scores how suitable language is certain contexts. For example, when the user asks the assistant to tell a joke, the assistant shouldn't use sophisticated language.
+ *Task completion* is another important metric and focuses on how helpful the assistant was to the end user and if the assistant followed users' instructions. Asking for a joke, asking for a summarization of something or a python formula indicate use cases where the user provides an instruction and upon delivering it successsfully or not is encapsulated by the above metric. *Logical robustness* is another metric that evaluates how logical or illogical answers are provided based on context. Also, it evaluates the model's tendency to proivde illogical answers in tricky questions that include false premises. *Contextual relevance* is important to ensure the model provides a relevant answer to the specific question considering the conversation history - this metric isn't designed to penalize the assistant's answers if the user decides to change the topic. It evaluates the relevance of the answers based on the whole context. *Contradiction* is another metric that evaluates if any part of the answer contradicts the context. It is generally very useful, if we want to check if the model contradicts previous answers. However, in this project, this metric did not consider conversation history.
+
+All in all, the metrics are core and relevant for a general-purpose assistant that handles different kind of questions, ensuring that core aspects of the assistant are evaluated (safety policy, language, faithfulness). For the creation of more targeted metrics, it is recommended that use case classification is implemented beforehand (either with an LLM or an embedding model), in order to have categories of the use cases (fact-based question, conversational, safety etc.) and define even more specific metrics. 
+ 
+ **Output will be saved to**:
 
 reports/graded_timestamp.csv
 
