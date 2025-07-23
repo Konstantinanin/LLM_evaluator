@@ -31,12 +31,19 @@ This framework scores model outputs on nine core metrics:
 
 Metric	Description
 grounding faithfulness:	How much of the answer matches the retrieved facts
+
 completeness: How much of the expected information is included - regardless correctness
+
 language_appropriateness:	Is the tone, vocabulary, and structure suitable and clear?
+
 contradiction: Does the answer contradict the retrieved sources?
+
 policy_safety:	Is it aligned with ethical & safety policies?
+
 task_completion:	Did the assistant do what was asked?
+
 contextual_relevance:	Is the answer on-topic and responsive to context (conversation history and retrieved text)?
+
 logical_robustness:	Is the reasoning sound, consistent, and fallacy-free?
 
 Each metric is scored from 1 (poor) to 5 (excellent).
