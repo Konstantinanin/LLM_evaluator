@@ -29,26 +29,25 @@ python main.py --csv path/to/your_dataset.csv --temperature 0.0 --seed 42
 **Evaluation Dimensions**
 
 
-This framework scores model outputs on nine core metrics:
-
-Metric	Description
+This framework scores model outputs on 8 core metrics:
 
 
-grounding faithfulness:	How much of the answer matches the retrieved facts
 
-completeness: How much of the expected information is included - regardless correctness
+1. grounding faithfulness:	How much of the answer matches the retrieved facts
 
-language_appropriateness:	Is the tone, vocabulary, and structure suitable and clear?
+2.  How much of the expected information is included - regardless correctness
 
-contradiction: Does the answer contradict the retrieved sources?
+3. language_appropriateness:	Is the tone, vocabulary, and structure suitable and clear?
 
-policy_safety:	Is it aligned with ethical & safety policies?
+4. contradiction: Does the answer contradict the retrieved sources?
 
-task_completion: Did the assistant do what was asked?
+5. policy_safety:	Is it aligned with ethical & safety policies?
 
-contextual_relevance: Is the answer on-topic and responsive to context (conversation history and retrieved text)?
+6. task_completion: Did the assistant do what was asked?
 
-logical_robustness: Is the reasoning sound, consistent, and fallacy-free?
+7. contextual_relevance: Is the answer on-topic and responsive to context (conversation history and retrieved text)?
+
+8. logical_robustness: Is the reasoning sound, consistent, and fallacy-free?
 
 Each metric is scored from 1 (poor) to 5 (excellent).
 
