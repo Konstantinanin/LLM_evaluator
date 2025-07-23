@@ -32,6 +32,8 @@ python main.py --csv path/to/your_dataset.csv --temperature 0.0 --seed 42
 This framework scores model outputs on nine core metrics:
 
 Metric	Description
+
+
 grounding faithfulness:	How much of the answer matches the retrieved facts
 
 completeness: How much of the expected information is included - regardless correctness
