@@ -35,7 +35,7 @@ This framework scores model outputs on 8 core metrics:
 
 1. grounding faithfulness:	How much of the answer matches the retrieved facts
 
-2.  How much of the expected information is included - regardless correctness
+2. completeness: How much of the expected information is included - regardless correctness
 
 3. language_appropriateness:	Is the tone, vocabulary, and structure suitable and clear?
 
