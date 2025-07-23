@@ -80,7 +80,11 @@ Each evaluation run produces:
 A .csv with per-sample scores for all metrics
 
 A .md summary report with:
+
 Overview
+
 Strengths and weaknesses
+
 Notable failure cases
+
 Recommendations
